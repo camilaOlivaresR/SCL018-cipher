@@ -36,7 +36,7 @@ Por esto me inspire en colores y logo de la pagina original a cual se puede acce
 terminar...
 
 ### Prototipo
-
+git
 Los prototipos fueron cambiando. El dieño final , no es igual al inicial , pero mantiene la 
 esencia que fue penasada segun el Santo Grial para que sea responsiva qu fue un aspecto
 fundamental de la idea original.

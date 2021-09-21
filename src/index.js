@@ -1,78 +1,39 @@
 import cipher from './cipher.js';
 
-console.log(cipher);
+//declaro la variable boton codificar con id codebutton que es un elemento del Dom//
+const codeButton = document.getElementById("codeButton"); 
+const decodeButton = document.getElementById("decodeButton");
+// declaro la variable texto sin codificar con id textOriginal que es un elemento del Dom//
+const textOriginal = document.getElementById("textOriginal");
+const textCifrado = document.getElementById("textCifrado");
+//declaro variable shiftText que va buscar el id shift//
+const shiftText = document.getElementById("shift");
 
-/*
-const alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-const input  = document.getElementById('input-texto-plano');
-const cifrador = document.getElementById('cifrador');
-const resultado = document.getElementById('resultado');
-const rango = document.getElementById('rango');
-*/
-const abc = [
-    'A','B','C','D','E','F',
-    'G','H','I','J','K','L',
-    'M','N','O','P','Q','R',
-    'S','T','U','V','W','X',
-    'Y','Z' 
-];
-/* declaro funcion condicional para cifar un caracter del texto */
-function encrypt(char, shift) {
-    let include =        
-    abc.includes(    /*metodo array include para corroborar que las letras sean parte del alfabeto */
-      char.toUpperCase()); /* metodo para convertir caracteres a mayusculas */
-       
-    if (include){      
-     let position =         
-     abc.indexOf(char.toUpperCase());   /* la funcion obtiene posicion de cada letra utilizando la funcion indexof*/
-     
-        
-    let newPosition =    /* obtenemos la nueva posicion de la letra en el alfabeto*/
-      (position+shift) %   26; /* dividimos por el modulo 26 cualquier numero superior hara que comienze desde la letra A */
-        
-        
-        return abc[newPosition]; /* devuelve la nueva letra segun el alfabeto */
-    }else  return char; /* si el caracter no esta en el alfabeto lo devuelve */
-    }
-  
-function encryptText() { 
 
-const form = document.forms[0]; /* elemento de dom para leer formulario de la pagina*/
 
-let titulo =
- document.getElementById("tituloId");  /* */
-   
- titulo.innerHTML = "Mensaje Encriptado";/* */
+//aplico el metodo aEL al boton codificar , recibe 2 parametros
+//el primer parametro es un evento click del usuario
+//luego se gatilla el el segundo parametro la funcion clickCode
+codeButton.addEventListener("click", clickCode);
+decodeButton.addEventListener("click", clickDecode);
 
-let shift= Number(form.shift.value); /*  */
-   
-let sourceText =   /* texto original*/
-  form.sourceText.value;       /* */
-   
-form.sourceText.value 
-  = [... sourceText ].map(char =>
-    encrypt(char, shift)).join('');/* */
+
+
+//declaro funcion clickCode
+function clickCode() {
+    //declaro constante offset toma el valor del shiftText y lo convierte en numero entero
+    // parseInt es una funcion que parsea o analiza un string y retorna un entero
+    const offset = parseInt(shiftText.value);
+    // declaro constante que almacena el valor del texto original
+    const firstInputText = textOriginal.value;
+    //el valor de texto cifrado recibe el metodo encode aplicado a cipher
+    textCifrado.value = cipher.encode(offset, firstInputText);
+}   
+
+function clickDecode() {
+    const offset = parseInt(shiftText.value);
+    const secondInputText = textOriginal.value;
+   textCifrado.value = cipher.decode(offset, secondInputText);
 }
 
-  
-function decryptText() {
-const form = document.forms[0];  
-
-let titulo = document.getElementById("tituloId");       
-
-tutulo.innerHTML = "Mensaje Desencriptado";
-     
-let shift =  
-  Number(form.shift.value);  
-  let sourceText = form.sourceText.value;    
-   
-shift = 
-   (alfabeto.length - shift) %   26; 
-   
-  
-form.sourceText.value 
-    = [... sourceText ].map(char => 
-      encrypt(char,    
-      shift)).join('');
-}
 

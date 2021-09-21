@@ -1,122 +1,39 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
-    <script src="index.js" type="module"></script>
-  </body>
-</html> 
--->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cipher</title>
-    <link href="cipher.css" rel="stylesheet " />
-  
+    <link rel="stylesheet" href="style.css" /> 
     <link rel="icon"  href="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png">
 
-</head>
-<body>
-    <form>
-    <div class="grid">
-        <header class="header">
-            <h1>Bienvenidas</h1>
-                 </header>
-    <nav class="nav">
-        <li class="home-link">
-            <a href="/es/">
-              <img src="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png"  class="img-responsive">
-            </a>
-        </li>
-        </nav>
-        <main class="main">
+  </head>
+  <body>
+    <section>
+    <div class= "container">
+      <div class="box">
+        <div id="root">
+            <h1>BIENVENIDAS</h1>
+
+
+            <img src="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png"  class="img-responsive" alt="" width="100" heght= "100">
+        </div>
+        <div id="caesarCipher">
           
-         <section class= "content">
-        
-        <p>Mujeres sobre las Olas es una organización no lucrativa involucrada
-            con los derechos humanos de las mujeres. Su misión es prevenir embarazos
-            no deseados y abortos insalubres a lo largo del mundo.</p>
-        <p>Con un barco, Mujeres sobre las Olas puede proveer anticonceptivos, información,
-             entrenamiento, talleres y abortos seguros y legales fuera de aguas territoriales
-             donde el aborto es ilegal. Trabajando en cooperación cercana con organizaciones locales,
-             Mujeres sobre las Olas quiere responder a una necesidad médica urgente, dar poder de decisión
-             a las mujeres para que aprovechen su derecho humano a la salud reproductiva y al aborto legal
-             y seguro y llamar la atención a las consecuencias de un embarazo no deseado y un aborto ilegal</p>
-        <div>
-             <p> Si vives en un pais en que no es legar el aborto, para proteger tu privacidad encripta tu mensaje aqui</p>
+        <input type="text" class="input" placeholder="Escribe tu Mensaje aquí y selecciona un valor Shift" id="textOriginal" value=""> 
+        <div class="central">
+          <button id="codeButton" class="buttonCode"> CODIFICAR </button>
+          <button id="decodeButton" class="buttonDecode"> DECODIFICAR </button>
+          <input type="number" min="1" max="33" class="shiftInput" placeholder="shift" id="shift" value="">
         </div>
-    </section>
-    <p id="mensajeId">Ingresa Tu Mensaje</p>
-    <div>          
-        <textarea name="sourceText" rows="8" cols="50"  spellcheck="false" value="">                       
-        </textarea>
-       </div>
-       <div>      
-        <label for="shift">Cifrador:</label>
-        
-        <select id="shift" name="shift">
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="5">5</option>
-         <option value="10">10</option>
-       
-        </select> 
-      </div>
-       
-      <div>      
-       
-        <input type="button" id="decrypt" value="Codificar" onclick="encryptText();">    
-        <input type="button" id="decrypt" value="Decodificar" onclick="decryptText();">    
-      
-    </div>
-      
-         <!--
-        <div class="conteiner">
-        <form id= "cifrador" autocomplete="off"> no guarde entradas anteriores
-            <input  id="input-texto-plano" spellcheck="false" placeholder="ingrese el texto "  type="text" name="text">
-         </form>
-        
-        </div>
-       
-         
-         <div class="rango">
-            <input id="rango" type="range" value="13" min="1" max="26" oninput="this.nextElementSibling.value = this.value">
-            <output>13</output> 
-            
-            <div>
-                <input class="btn" type ="button" value="Cifrar" onclick="encryptText();">
-            </div>
-            </div>
-             
-           <div>
-            <input class="btn" type ="button" value="Descifrar" onclick="decryptText();">
-        </div>
-        -->
-         
-           </main>
-           <aside class="aside">
-            <p> acerca de nosotras: hola hola...</p>
-          </aside>
-    
-           <footer class="footer" >
+          <input type="text" class="input" placeholder="Mensaje Cifrado" id="textCifrado" value="" readonly>
+          </div> 
+          <footer class="footer" >
             Envia tu mensaje a esta direccion,  email: 
         <a href="">info@womenonwaves.org</a>
-        <a href=""></a>
-        
-       <p> compartir es bueno, copy me.</p>
         </footer>
-</div>
- </form>
- <script src="cipher.js" type="text/javascript"></script>
-</body>
-
+           </div>
+          <script src="index.js" type="module"></script>
+      </div>
+  </section>
+  </body>
 </html>
