@@ -1,8 +1,8 @@
 import cipher from './cipher.js';
 
 //declaro la variable boton codificar con id codebutton que es un elemento del Dom//
-const codeButton = document.getElementById("codeButton"); 
-const decodeButton = document.getElementById("decodeButton");
+const botonCodificar= document.getElementById("botonCodificar"); 
+const botonDecodificar = document.getElementById("botonDecodificar");
 // declaro la variable texto sin codificar con id textOriginal que es un elemento del Dom//
 const textOriginal = document.getElementById("textOriginal");
 const textCifrado = document.getElementById("textCifrado");
@@ -14,8 +14,8 @@ const shiftText = document.getElementById("shift");
 //aplico el metodo aEL al boton codificar , recibe 2 parametros
 //el primer parametro es un evento click del usuario
 //luego se gatilla el el segundo parametro la funcion clickCode
-codeButton.addEventListener("click", clickCode);
-decodeButton.addEventListener("click", clickDecode);
+botonCodificar.addEventListener("click", clickCode);
+botonDecodificar.addEventListener("click", clickDecode);
 
 
 
