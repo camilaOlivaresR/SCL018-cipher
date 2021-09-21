@@ -40,8 +40,9 @@ git
 Los prototipos fueron cambiando. El dieño final , no es igual al inicial , pero mantiene la 
 esencia que fue penasada segun el Santo Grial para que sea responsiva qu fue un aspecto
 fundamental de la idea original.
-insertar prototipos...
 
+![prototipo](/src/img/Criptografia.png "Criptografia")
+![prototipo2](/src/img/Cripto2.png "Cripto2")
 ***
 ## Objetivos de aprendisaje pendientes
 > Aprender más de :
