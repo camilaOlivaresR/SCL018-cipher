@@ -21,7 +21,8 @@ mensaje con el que una mujer en dicha situacion se comunique con la respectiva O
 en riesgo su libertad por ejercer su derecho a desicir sobre su cuerpo .
 
 ## Link Woman On Waves 
- --[Mujeres sobre Olas](https://www.womenonwaves.org/"Visita A Mujeres Sobre Olas")
+
+* [Mujeres sobre Olas](https://www.womenonwaves.org/ "Visita A Mujeres Sobre Olas")
 
 ## Instrucciones de Uso
 **Para Codificar**
