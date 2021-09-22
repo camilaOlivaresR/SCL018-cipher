@@ -34,6 +34,11 @@ en riesgo su libertad por ejercer su derecho a desicir sobre su cuerpo .
 * Copialo y envialo al email que aparece al final de la pagina web
   junto al shift o valor numerico elegido para codificar tu mensaje.
 
+
+### Formula para el Cifrado Cesar
+ (x-65+n)%26+65 en la que x toma el valor ASCII y n el valor de despalazamiento.
+ ![asciiTabla](/src/img/tablaAscii.png "Ascii")
+
 ## Interfaz
 ***
 Considerando que las usuarias que desen proteger su privacidad se contactaran con una ONG
@@ -50,10 +55,6 @@ al diseño original.
 ![prototipo](/src/img/Criptografia.png "Criptografia")
 ![prototipo2](/src/img/Cripto2.png "Cripto2")
 ***
-
-### Formula para el Cifrado Cesar
- (x-65+n)%26+65 en la que x toma el valor ASCII y n el valor de despalazamiento.
- ![asciiTabla](/src/img/ASCII-Table.png "ASCII")
 
 ## Objetivos de aprendisaje pendientes
 > Aprender más de :
