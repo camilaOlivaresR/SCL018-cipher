@@ -35,9 +35,12 @@ en riesgo su libertad por ejercer su derecho a desicir sobre su cuerpo .
   junto al shift o valor numerico elegido para codificar tu mensaje.
 
 
-### Formula para el Cifrado Cesar
- (x-65+n)%26+65 en la que x toma el valor ASCII y n el valor de despalazamiento.
- ![asciiTabla](/src/img/tablaAscii.png "Ascii")
+## Formula para el Cifrado Cesar
+  ##(x-65+n)%26+65 
+  en la que x toma el valor ASCII y n el valor de despalazamiento.
+
+![asciiTabla](/src/img/tablaAscii.png "Ascii")
+
 
 ## Interfaz
 ***
