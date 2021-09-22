@@ -7,7 +7,7 @@ const botonDecodificar = document.getElementById("botonDecodificar");
 const textOriginal = document.getElementById("textOriginal");
 const textCifrado = document.getElementById("textCifrado");
 //declaro variable shiftText que va buscar el id shift//
-const shiftText = document.getElementById("shift");
+const shiftNum = document.getElementById("shift");
 
 
 
@@ -23,17 +23,17 @@ botonDecodificar.addEventListener("click", clickDecode);
 function clickCode() {
     //declaro constante offset toma el valor del shiftText y lo convierte en numero entero
     // parseInt es una funcion que parsea o analiza un string y retorna un entero
-    const offset = parseInt(shiftText.value);
+    const offset = parseInt(shiftNum.value);
     // declaro constante que almacena el valor del texto original
-    const firstInputText = textOriginal.value;
+    const inputEntrada = textOriginal.value;
     //el valor de texto cifrado recibe el metodo encode aplicado a cipher
-    textCifrado.value = cipher.encode(offset, firstInputText);
+    textCifrado.value = cipher.encode(offset, inputEntrada);
 }   
 
 function clickDecode() {
-    const offset = parseInt(shiftText.value);
-    const secondInputText = textOriginal.value;
-   textCifrado.value = cipher.decode(offset, secondInputText);
+    const offset = parseInt(shiftNum.value);
+    const inputSalida = textOriginal.value;
+   textCifrado.value = cipher.decode(offset, inputSalida);
 }
 
 

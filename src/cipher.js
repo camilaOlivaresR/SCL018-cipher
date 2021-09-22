@@ -30,6 +30,7 @@ function cipherChar (offset, character) {
     }
     //entonces nos retorna un string especifico al valor que tome
     // string.fromcharcodeat es un metodo que retorna un string
+    //((charModulo resultado de la formula+ascii))
     return String.fromCharCode((charModulo + ascii));
   } else {
     //si el valor no cumple las condicioes nos retorna el mismo caracter
@@ -41,7 +42,7 @@ function cipherChar (offset, character) {
 //PARA CIFARAR TODA LA CADENA DE TEXTO
 //recibe como parametros el offset y string
 function cipherString(offset, string) {
-
+//exepciones o errores
   if(typeof offset !== "number") {
     throw new TypeError("error en valor de offset");
   }
@@ -52,7 +53,7 @@ function cipherString(offset, string) {
 
   // se guarda el resultado del cifrado
   //inicializar una variable vacia de string
-  //que almacenara el resultado
+  //que almacenara el resultado, se guardara un resultado
   let cipherResult = "";
 
   // se inicia un ciclo de iteracion que recorre todas las letras o string
