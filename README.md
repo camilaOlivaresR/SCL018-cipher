@@ -36,8 +36,8 @@ en riesgo su libertad por ejercer su derecho a desicir sobre su cuerpo .
 
 
 ## Formula para el Cifrado Cesar
-  ##(x-65+n)%26+65 
-  en la que x toma el valor ASCII y n el valor de despalazamiento.
+* ((x-65 )+n)) %26 + 65 
+* En la que x toma el valor ASCII y n el valor de despalazamiento.
 
 ![asciiTabla](/src/img/tablaAscii.png "Ascii")
 
