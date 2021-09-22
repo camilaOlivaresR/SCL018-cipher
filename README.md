@@ -10,6 +10,7 @@ original es remplazada por otra más adelante en el mismo alfabeto
 según un numero fijo de despalzamiento.
 ***
 
+
 ## Sobre Mensaje Privado Woman on Wave
 
 **¿Necesitas comunicarte con la ONG Woman on Wave desde un país en que el aborto es Ilegal?**
@@ -49,6 +50,11 @@ al diseño original.
 ![prototipo](/src/img/Criptografia.png "Criptografia")
 ![prototipo2](/src/img/Cripto2.png "Cripto2")
 ***
+
+### Formula para el Cifrado Cesar
+ (x-65+n)%26+65 en la que x toma el valor ASCII y n el valor de despalazamiento.
+ ![asciiTabla](/src/img/ASCII-Table.png "ASCII")
+
 ## Objetivos de aprendisaje pendientes
 > Aprender más de :
 > * [x] Funciones.
