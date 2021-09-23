@@ -10,28 +10,28 @@ function cipherChar (offset, character) {
   if(characterLowerCase || characterUpperCase ) {
   
     //le asigno el valor 26 a la variable modulo, por la cantidad de caracteres del alfabeto esp
-    let modulo = 26;
+    let abc = 26;
     // declaro la variable ascii y le asigno valor 65 
-    let ascii = 65;
+    let AasciiTab = 65;
     
     //si se cumple la condicion que sea letra minuscula
     if(characterLowerCase) {
       // le asigno 97 a la variable ascii
-      ascii = 97;
+      AasciiTab = 97;
     } 
 
     //declaro variable charModulo
     // que en este caso el charModulo toma el valor de la formula
-    let charModulo = ((character - ascii) + offset) % modulo;
+    let charModulo = ((character - AasciiTab) + offset) % abc;
     //si el valor es menor que 0
     if(charModulo < 0) {
       //charmodulo tomara el sgte valor
-      charModulo = charModulo + modulo;
+      charModulo = charModulo + abc;
     }
     //entonces nos retorna un string especifico al valor que tome
     // string.fromcharcodeat es un metodo que retorna un string
     //((charModulo resultado de la formula+ascii))
-    return String.fromCharCode((charModulo + ascii));
+    return String.fromCharCode((charModulo + AasciiTab));
   } else {
     //si el valor no cumple las condicioes nos retorna el mismo caracter
     return String.fromCharCode(character);
@@ -54,7 +54,7 @@ function cipherString(offset, string) {
   // se guarda el resultado del cifrado
   //inicializar una variable vacia de string
   //que almacenara el resultado, se guardara un resultado
-  let cipherResult = "";
+  let result = "";
 
   // se inicia un ciclo de iteracion que recorre todas las letras o string
   for(let i = 0; i < string.length; i++){
@@ -62,10 +62,10 @@ function cipherString(offset, string) {
       //esta almacena la posicion numerica entera de cada letra del string
       const character = string.charCodeAt(i);
       // ahora cipherResult ira almacenando cada letra del string cifrada
-      cipherResult += cipherChar(offset, character);
+      result += cipherChar(offset, character);
   }
   //nos retorna el contenido total de la variable cipherResult
-  return cipherResult;
+  return result;
 }
 
 //declaro la constante cipher

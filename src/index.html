@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cipher</title>
-    <link rel="stylesheet" href="style.css" /> 
-    <link rel="icon"  href="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png">
 
-  </head>
-  <body>
-    <section>
-    <div class= "container">
-      <div class="box">c
-        <div id="root">
-            <h1>BIENVENIDAS</h1>
+<head>
+  <meta charset="utf-8">
+  <title>Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png">
+
+</head>
+
+<body>
+  <form>
+    <div class="container">
+      <div class="box">
+        <header>
+  
+          <h1>BIENVENIDAS</h1>
+        </header>
 
 
-            <img src="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png"  class="img-responsive" alt="" width="100" heght= "100">
-        </div>
+          <img
+            src="https://www.womenonwaves.org/image/lib/images/logo-square-600.png%28mediaclass-logo.e91673658f132babb0fb41120d1467594ce14cf2%29.png"
+            class="img-responsive" alt="" width="100" heght="100">
+        
         <main>
-          
-        <input type="text" class="input" placeholder="Escribe tu Mensaje aquí y selecciona un valor Shift" id="textOriginal" value=""> 
-        <div class="central">
-          <button id="botonCodificar" class="codeBoton"> CODIFICAR </button>
-          <button id="botonDecodificar" class="decoBoton"> DECODIFICAR </button>
-          <input type="number" min="1" max="33" class="llave" placeholder="shift" id="shift" value="">
-        </div>
+
+          <input type="text" class="input" placeholder="Escribe tu Mensaje aquí y selecciona un valor Shift"
+            id="textOriginal" value="">
+          <div class="central">
+            <button id="botonCodificar" > CODIFICAR </button>
+            <button id="botonDecodificar"> DECODIFICAR </button>
+            <input type="number" min="1" max="33" placeholder="shift" id="shift" value="">
+          </div>
           <input type="text" class="input" placeholder="Mensaje Cifrado" id="textCifrado" value="" readonly>
-      </main> 
-          <footer class="footer" >
-            Envia tu mensaje a esta direccion,  email: 
-        <a href="">info@womenonwaves.org</a>
+        </main>
+        <footer>
+          Envia tu mensaje a esta direccion, email:
+          <a href="">info@womenonwaves.org</a>
         </footer>
-           </div>
-          <script src="index.js" type="module"></script>
       </div>
-  </section>
-  </body>
+      <script src="index.js" type="module"></script>
+    </div>
+  </form>
+</body>
+
 </html>
