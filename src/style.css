@@ -28,11 +28,10 @@ h1 {
 }
 
 .box {
-    background-color: #ffffff;
-    width: 1500px;
-    height: 650px;
+    background-color: #ffff;
+    width: 50vw;
+    height: 90vh;
     border-radius: 6px;
-    margin-top: 10px;
     border: #42056b 4px none;
     float: center;
     box-sizing: border-box;

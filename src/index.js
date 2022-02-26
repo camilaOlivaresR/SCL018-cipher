@@ -7,6 +7,7 @@ const textOriginal = document.getElementById("textOriginal");
 const textCifrado = document.getElementById("textCifrado");
 //declaro variable shiftText que va buscar el id shift//
 const shiftText = document.getElementById("shift");
+const clear = document.getElementById("clear");
 
 
 
@@ -15,6 +16,7 @@ const shiftText = document.getElementById("shift");
 //luego se gatilla el el segundo parametro la funcion clickCode
 botonCodificar.addEventListener("click", clickCode);
 botonDecodificar.addEventListener("click", clickDecode);
+clear.addEventListener("click", btnclear);
 //declaro funcion clickCode
 function clickCode() {
     //declaro constante offset toma el valor del shiftText y lo convierte en numero entero
@@ -30,4 +32,9 @@ function clickDecode() {
     const offset = parseInt(shiftText.value);
     const secondInputText = textOriginal.value;
     textCifrado.value = cipher.decode(offset, secondInputText);
+}
+
+function btnclear() {
+    document.getElementById("textOriginal").value = "";
+    document.getElementById("textCifrado").value = ""
 }
